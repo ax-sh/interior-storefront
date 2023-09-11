@@ -1,12 +1,8 @@
-import "./App.css";
 import { Suspense } from "react";
 import { useRoutes } from "react-router-dom";
 import routes from "~react-pages";
 import { SideBar } from "./ui/side-bar.tsx";
-
-function Loader() {
-  return <p>Loading...</p>;
-}
+import { Loader } from "./ui/loader.tsx";
 
 function App() {
   return (
