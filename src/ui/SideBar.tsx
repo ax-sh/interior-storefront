@@ -1,7 +1,12 @@
 import { CgMenuRightAlt } from "react-icons/cg";
 import { AiOutlineHeart } from "react-icons/ai";
 import { MdShoppingCartCheckout } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { NavLink, NavLinkProps } from "react-router-dom";
+function activeClassName({
+  isActive,
+}: Extract<NavLinkProps["className"], { isActive: boolean }>) {
+  return isActive ? "text-blue-400" : "";
+}
 
 export function SideBar() {
   return (
@@ -13,12 +18,19 @@ export function SideBar() {
         <div className={"grow"} />
         <ul className={"vertical flex gap-3 pointer items-center"}>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={activeClassName as NavLinkProps["className"]}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/items">Items</Link>
+            <NavLink to="/items">Items</NavLink>
           </li>
-          <li>Collections</li>
+          <li>
+            <NavLink to="/collections">Collections</NavLink>
+          </li>
         </ul>
         <div className={"grow"} />
         <ul className={"flex flex-col gap-4"}>
@@ -26,7 +38,9 @@ export function SideBar() {
             <AiOutlineHeart size={30} />
           </li>
           <li>
-            <MdShoppingCartCheckout size={30} />
+            <NavLink to="/cart">
+              <MdShoppingCartCheckout size={30} />
+            </NavLink>
           </li>
         </ul>
       </nav>
