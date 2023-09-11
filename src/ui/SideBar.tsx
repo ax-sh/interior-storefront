@@ -1,6 +1,7 @@
 import { CgMenuRightAlt } from "react-icons/cg";
 import { AiOutlineHeart } from "react-icons/ai";
 import { MdShoppingCartCheckout } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export function SideBar() {
   return (
@@ -11,8 +12,12 @@ export function SideBar() {
         </div>
         <div className={"grow"} />
         <ul className={"vertical flex gap-3 pointer items-center"}>
-          <li>Masters</li>
-          <li>Items</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/items">Items</Link>
+          </li>
           <li>Collections</li>
         </ul>
         <div className={"grow"} />
