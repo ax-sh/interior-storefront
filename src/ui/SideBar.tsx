@@ -5,7 +5,7 @@ import { NavLink, NavLinkProps } from "react-router-dom";
 function activeClassName({
   isActive,
 }: Extract<NavLinkProps["className"], { isActive: boolean }>) {
-  return isActive ? "text-blue-400" : "";
+  return isActive ? "text-blue-400 font-bold" : "";
 }
 
 export function SideBar() {
