@@ -1,9 +1,9 @@
 import { PageHeader } from "../ui/page-header.tsx";
 
-export default function HomePage() {
+export default function CollectionsPage() {
   return (
     <div className={"px"}>
-      <PageHeader>Rooms.</PageHeader>
+      <PageHeader>Collections.</PageHeader>
     </div>
   );
 }

@@ -1,7 +1,9 @@
+import { PageHeader } from "../ui/page-header.tsx";
+
 export default function ItemsPage() {
   return (
     <div>
-      <h1>ItemsPage</h1>
+      <PageHeader>Items.</PageHeader>
     </div>
   );
 }
