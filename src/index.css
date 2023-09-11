@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vertical {
+  writing-mode: vertical-rl;
+  transform: scale(-1, -1);
+  cursor: pointer;
+  /*writing-mode: tb-rl;*/
+  /*transform: rotate(-180deg);*/
+  /*text-orientation: sideways;*/
+  /*writing-mode: vertical-lr;*/
+  /*white-space: nowrap;*/
+  /*text-align: center;*/
+  /*transform: rotate(90deg);*/
+  /*transform: rotate(180deg)mo;*/
+}
